@@ -83,32 +83,32 @@ class Cli {
         {
           type: 'input',
           name: 'color',
-          message: 'Enter Color',
+          message: 'Enter color',
         },
         {
           type: 'input',
           name: 'make',
-          message: 'Enter Make',
+          message: 'Enter make',
         },
         {
           type: 'input',
           name: 'model',
-          message: 'Enter Model',
+          message: 'Enter model',
         },
         {
           type: 'input',
           name: 'year',
-          message: 'Enter Year',
+          message: 'Enter year',
         },
         {
           type: 'input',
           name: 'weight',
-          message: 'Enter Weight in lbs',
+          message: 'Enter weight in lbs',
         },
         {
           type: 'input',
           name: 'topSpeed',
-          message: 'Enter Top Speed',
+          message: 'Enter top speed in mph',
         },
       ])
       .then((answers) => {
@@ -139,37 +139,37 @@ class Cli {
         {
           type: 'input',
           name: 'color',
-          message: 'Enter Color',
+          message: 'Enter color',
         },
         {
           type: 'input',
           name: 'make',
-          message: 'Enter Make',
+          message: 'Enter make',
         },
         {
           type: 'input',
           name: 'model',
-          message: 'Enter Model',
+          message: 'Enter model',
         },
         {
           type: 'input',
           name: 'year',
-          message: 'Enter Year',
+          message: 'Enter year',
         },
         {
           type: 'input',
           name: 'weight',
-          message: 'Enter Weight in lbs',
+          message: 'Enter weight in lbs',
         },
         {
           type: 'input',
           name: 'topSpeed',
-          message: 'Enter Top Speed',
+          message: 'Enter top speed in mph',
         },
         {
           type: 'input',
           name: 'towingCapacity',
-          message: 'Enter Towing Capacity',
+          message: 'Enter towing capacity',
         },
       ])
         .then((answers) => {
@@ -201,52 +201,52 @@ class Cli {
         {
           type: 'input',
           name: 'color',
-          message: 'Enter Color',
+          message: 'Enter color',
         },
         {
           type: 'input',
           name: 'make',
-          message: 'Enter Make',
+          message: 'Enter make',
         },
         {
           type: 'input',
           name: 'model',
-          message: 'Enter Model',
+          message: 'Enter model',
         },
         {
           type: 'input',
           name: 'year',
-          message: 'Enter Year',
+          message: 'Enter year',
         },
         {
           type: 'input',
           name: 'weight',
-          message: 'Enter Weight in lbs',
+          message: 'Enter weight in lbs',
         },
         {
           type: 'input',
           name: 'topSpeed',
-          message: 'Enter Top Speed',
+          message: 'Enter top speed in mph',
         },
         {
           type: 'input',
           name: 'frontWheelDiameter',
-          message: 'Enter Front Wheel Diameter in inches',
+          message: 'Enter front wheel diameter in inches',
         },
         {
           type: 'input',
           name: 'frontWheelBrand',
-          message: 'Enter Front Wheel Brand',
+          message: 'Enter front wheel brand',
         },
         {
           type: 'input',
           name: 'rearWheelDiameter',
-          message: 'Enter Rear Wheel Diameter in inches',
+          message: 'Enter rear wheel diameter in inches',
         },
         {
           type: 'input',
           name: 'rearWheelBrand',
-          message: 'Enter Rear Wheel Brand',
+          message: 'Enter rear wheel brand',
         },
       ])
       .then((answers) => {
