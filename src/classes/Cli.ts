@@ -102,7 +102,7 @@ class Cli {
         {
           type: 'input',
           name: 'weight',
-          message: 'Enter Weight',
+          message: 'Enter Weight in lbs',
         },
         {
           type: 'input',
@@ -158,7 +158,7 @@ class Cli {
         {
           type: 'input',
           name: 'weight',
-          message: 'Enter Weight',
+          message: 'Enter Weight in lbs',
         },
         {
           type: 'input',
@@ -220,7 +220,7 @@ class Cli {
         {
           type: 'input',
           name: 'weight',
-          message: 'Enter Weight',
+          message: 'Enter Weight in lbs',
         },
         {
           type: 'input',
@@ -230,7 +230,7 @@ class Cli {
         {
           type: 'input',
           name: 'frontWheelDiameter',
-          message: 'Enter Front Wheel Diameter',
+          message: 'Enter Front Wheel Diameter in inches',
         },
         {
           type: 'input',
@@ -240,7 +240,7 @@ class Cli {
         {
           type: 'input',
           name: 'rearWheelDiameter',
-          message: 'Enter Rear Wheel Diameter',
+          message: 'Enter Rear Wheel Diameter in inches',
         },
         {
           type: 'input',
