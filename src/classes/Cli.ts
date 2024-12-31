@@ -80,55 +80,94 @@ class Cli {
   createCar(): void {
     inquirer
       .prompt([
-        {
-          type: 'input',
-          name: 'color',
-          message: 'Enter color',
-        },
-        {
-          type: 'input',
-          name: 'make',
-          message: 'Enter make',
-        },
-        {
-          type: 'input',
-          name: 'model',
-          message: 'Enter model',
-        },
-        {
-          type: 'input',
-          name: 'year',
-          message: 'Enter year',
-        },
-        {
-          type: 'input',
-          name: 'weight',
-          message: 'Enter weight in lbs',
-        },
-        {
-          type: 'input',
-          name: 'topSpeed',
-          message: 'Enter top speed in mph',
-        },
+      {
+        type: 'input',
+        name: 'color',
+        message: 'Enter color',
+        validate: (input) => {
+          if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
+          return 'Please enter a valid color';
+          }
+          return true;
+        }
+      },
+      {
+        type: 'input',
+        name: 'make',
+        message: 'Enter make',
+        validate: (input) => {
+          if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
+          return 'Please enter a valid make';
+          }
+          return true;
+        }
+      },
+      {
+        type: 'input',
+        name: 'model',
+        message: 'Enter model',
+        validate: (input) => {
+          if (input === '' || typeof input !== 'string') { // some car models have numbers in the name
+          return 'Please enter a valid model';
+          }
+          return true;
+        }
+      },
+      {
+        type: 'input',
+        name: 'year',
+        message: 'Enter year',
+        validate: (input) => {
+          const year = parseInt(input);
+          if (isNaN(year) || year < 1886 || year > new Date().getFullYear() || input === '') { // 1886 is the year the first car was patented
+            return 'Please enter a valid year';
+          }
+          return true;
+        }
+      },
+      {
+        type: 'input',
+        name: 'weight',
+        message: 'Enter weight in lbs',
+        validate: (input) => {
+          const weight = parseInt(input);
+          if (isNaN(weight) || weight <= 0 || input === '') {
+            return 'Please enter a valid weight';
+          }
+          return true;
+        }
+      },
+      {
+        type: 'input',
+        name: 'topSpeed',
+        message: 'Enter top speed in mph',
+        validate: (input) => {
+          const topSpeed = parseInt(input);
+          if (isNaN(topSpeed) || topSpeed <= 0 || input === '') {
+            return 'Please enter a valid top speed';
+          }
+          return true;
+        }
+      },
       ])
       .then((answers) => {
-        const car = new Car(
-          Cli.generateVin(),
-          // pass required properties to the Car constructor
-          answers.color, 
-          answers.make,
-          answers.model,
-          parseInt(answers.year),
-          parseInt(answers.weight),
-          parseInt(answers.topSpeed),
-          []
-        );
-        // push the car to the vehicles array
-        this.vehicles.push(car);
-        // set the selectedVehicleVin to the vin of the car
-        this.selectedVehicleVin = car.vin;
-        // perform actions on the car
-        this.performActions();
+      const car = new Car(
+        Cli.generateVin(),
+        // pass required properties to the Car constructor
+        answers.color, 
+        answers.make,
+        answers.model,
+        parseInt(answers.year),
+        parseInt(answers.weight),
+        parseInt(answers.topSpeed),
+        []
+      );
+      // push the car to the vehicles array
+      this.vehicles.push(car);
+      // set the selectedVehicleVin to the vin of the car
+      this.selectedVehicleVin = car.vin;
+      // perform actions on the car
+      this.performActions();
       });
   }
 
@@ -140,36 +179,82 @@ class Cli {
           type: 'input',
           name: 'color',
           message: 'Enter color',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
+            return 'Please enter a valid color';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'make',
           message: 'Enter make',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
+            return 'Please enter a valid make';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'model',
           message: 'Enter model',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string') {
+            return 'Please enter a valid model';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'year',
           message: 'Enter year',
+          validate: (input) => {
+            const year = parseInt(input);
+            if (isNaN(year) || year < 1896 || year > new Date().getFullYear() || input === '') { // 1896 is the year the first truck was built
+              return 'Please enter a valid year';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'weight',
           message: 'Enter weight in lbs',
+          validate: (input) => {
+            const weight = parseInt(input);
+            if (isNaN(weight) || weight <= 0 || input === '') {
+              return 'Please enter a valid weight';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'topSpeed',
           message: 'Enter top speed in mph',
+          validate: (input) => {
+            const topSpeed = parseInt(input);
+            if (isNaN(topSpeed) || topSpeed <= 0 || input === '') {
+              return 'Please enter a valid top speed';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'towingCapacity',
           message: 'Enter towing capacity',
+          validate: (input) => {
+            const towingCap = parseInt(input);
+            if (isNaN(towingCap) || towingCap <= 0 || input === '') {
+              return 'Please enter a valid towing capacity';
+            }
+            return true;
+          }
         },
       ])
         .then((answers) => {
@@ -202,51 +287,116 @@ class Cli {
           type: 'input',
           name: 'color',
           message: 'Enter color',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
+              return 'Please enter a valid color';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'make',
           message: 'Enter make',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
+            return 'Please enter a valid make';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'model',
           message: 'Enter model',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string') {
+            return 'Please enter a valid model';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'year',
           message: 'Enter year',
+          validate: (input) => {
+            const year = parseInt(input);
+            if (isNaN(year) || year < 1885 || year > new Date().getFullYear() || input === '') { // 1885 is the year the first motorbike was invented
+              return 'Please enter a valid year';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'weight',
           message: 'Enter weight in lbs',
+          validate: (input) => {
+            const weight = parseInt(input);
+            if (isNaN(weight) || weight <= 0 || input === '') {
+              return 'Please enter a valid weight';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'topSpeed',
           message: 'Enter top speed in mph',
+          validate: (input) => {
+            const topSpeed = parseInt(input);
+            if (isNaN(topSpeed) || topSpeed <= 0 || input === '') {
+              return 'Please enter a valid top speed';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'frontWheelDiameter',
           message: 'Enter front wheel diameter in inches',
+          validate: (input) => {
+            const fDiameter = parseInt(input);
+            if (isNaN(fDiameter) || fDiameter <= 0 || input === '') {
+              return 'Please enter a valid front wheel diameter';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'frontWheelBrand',
           message: 'Enter front wheel brand',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string') {
+            return 'Please enter a valid brand';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'rearWheelDiameter',
           message: 'Enter rear wheel diameter in inches',
+          validate: (input) => {
+            const rDiameter = parseInt(input);
+            if (isNaN(rDiameter) || rDiameter <= 0 || input === '') {
+              return 'Please enter a valid rear wheel diameter';
+            }
+            return true;
+          }
         },
         {
           type: 'input',
           name: 'rearWheelBrand',
           message: 'Enter rear wheel brand',
+          validate: (input) => {
+            if (input === '' || typeof input !== 'string') {
+            return 'Please enter a valid brand';
+            }
+            return true;
+          }
         },
       ])
       .then((answers) => {
