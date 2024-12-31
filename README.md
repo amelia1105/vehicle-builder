@@ -1,17 +1,10 @@
-# vehicle-builder
+# Vehicle Builder Application
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This application allows users to select and create vehicles and then perform certain actions on those vehicles, like accelerate, decelerate, or tow (if able). The user will start the application using npm start and exit the application using the 'Exit' option. This project was built as part of the Module 8 Challenge for the Rutgers University Coding Bootcamp. My motivation in completing this project was to not only improve my ability to code in TypeScript but also to improve the quality of my code by addressing my problem areas. For example, even though validation was not a requirement for this project, I implemented it because it was something I skipped over last time, and I want to write better code. While this project helped me learn more about Inquirer and TypeScript, it also gave me some real world experience by using starter code instead of starting from scratch.
 
 ## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -22,17 +15,43 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+1. In the terminal, navigate to where you would like the repo to be stored on your device.
+
+2. Using the HTTPS or SSH key found in the GitHub repo, clone the repo to your device using the following:
+
+    ```sh
+    git clone <filepath>
+    ```
+
+3. Open the newly installed vehicle-builder directory in the terminal. In the command line, install dependencies using the following:
+
+    ```sh
+    npm i
+    ```
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+1. Open the command line and navigate to the vehicle-builder directory if you are not already there. Use npm start to start the application:
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
+    ```sh
+    npm start
     ```
+
+2. You should be prompted to create a vehicle or select an existing vehicle. Use the arrows to scroll between the two, and hit enter to select an option.
+
+    ![options to create or select a vehicle](./assets/create-select.png)
+
+3. If you hit 'Create a new vehicle', you will be prompted to select 'Car', 'Truck', or 'Motorbike'. Select one.
+
+    ![options to create a type of vehicle](./assets/car-tr-mot.png)
+
+4. When you select one of these options, you will be prompted to enter information about the vehicle. Some of the prompts may be different depending on the type of vehicle you selected.
+
+    ![vehicle information prompts](./assets/vehicle-info.png)
+
+5. You will then be able to perform actions on the vehicle. Note that you must start the vehicle to perform some actions, like accelerate and decelerate. Additionally, some vehicle types will not be able to perform certain actions, like wheelie or tow.
+
+    ![list of vehicle actions](./assets/actions-list.png)
 
 ## Credits
 
