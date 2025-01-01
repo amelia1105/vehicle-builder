@@ -45,13 +45,17 @@ This application allows users to select and create vehicles and then perform cer
 
     ![options to create a type of vehicle](./assets/car-tr-mot.png)
 
-4. When you select one of these options, you will be prompted to enter information about the vehicle. Some of the prompts may be different depending on the type of vehicle you selected.
+4. When you select one of these options, you will be prompted to enter information about the vehicle. Prompts may differ depending on the type of vehicle selected.
 
     ![vehicle information prompts](./assets/vehicle-info.png)
 
 5. You will then be able to perform actions on the vehicle. Note that you must start the vehicle to perform some actions, like accelerate and decelerate. Additionally, some vehicle types will not be able to perform certain actions, like wheelie or tow.
 
     ![list of vehicle actions](./assets/actions-list.png)
+
+6. When you are ready to exit the application, select the 'Exit' option from the vehicle actions list.
+
+    ![exit option in list](./assets/exit.png)
 
 ## Credits
 
