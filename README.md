@@ -92,4 +92,4 @@ SOFTWARE.
 For any questions about this project, please contact me by email: aebellanger@yahoo.com
 
 ## Video
-[How to install and use this application]()
+[How to install and use this application](https://drive.google.com/file/d/1qyh15o-JGNRHdrHM35rTW9-PmE_ZfAdl/view)

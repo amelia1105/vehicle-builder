@@ -247,7 +247,7 @@ class Cli {
         {
           type: 'input',
           name: 'towingCapacity',
-          message: 'Enter towing capacity',
+          message: 'Enter towing capacity in lbs',
           validate: (input) => {
             const towingCap = parseInt(input);
             if (isNaN(towingCap) || towingCap <= 0 || input === '') {
