@@ -369,7 +369,7 @@ class Cli {
           name: 'frontWheelBrand',
           message: 'Enter front wheel brand',
           validate: (input) => {
-            if (input === '' || typeof input !== 'string') {
+            if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
             return 'Please enter a valid brand';
             }
             return true;
@@ -392,7 +392,7 @@ class Cli {
           name: 'rearWheelBrand',
           message: 'Enter rear wheel brand',
           validate: (input) => {
-            if (input === '' || typeof input !== 'string') {
+            if (input === '' || typeof input !== 'string' || /\d/.test(input)) {
             return 'Please enter a valid brand';
             }
             return true;
@@ -540,13 +540,20 @@ class Cli {
           }
         } else if (answers.action === 'Tow') {
           // find the selected vehicle and tow another vehicle
+          let truck: Truck | undefined;
           for (let i = 0; i < this.vehicles.length; i++) {
-            if (this.vehicles[i].vin === this.selectedVehicleVin) {
-              // call the findVehicleToTow method to find a vehicle to tow
-              this.findVehicleToTow(this.vehicles[i] as Truck);
-              // return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous
-              return; 
+            if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Truck) {
+              truck = this.vehicles[i] as Truck;
             }
+          }
+          if (truck) {
+            // if the selected vehicle is a truck, call the findVehicleToTow method to find a vehicle to tow
+            this.findVehicleToTow(truck);
+            // return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous
+            return;
+          } else {
+            // if the selected vehicle is not a truck, log that the selected vehicle is not able to tow
+            console.log('The selected vehicle is not able to tow');
           }
         } else if (answers.action === 'Wheelie') {
           // find the selected vehicle and perform a wheelie
