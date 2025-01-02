@@ -59,7 +59,7 @@ This application allows users to select and create vehicles and then perform cer
 
 ## Credits
 
-Starter code was sourced from Rutgers University Coding Bootcamp section RUT-VIRT-FSF-PT-10-2024-U-LOLC-MWTH > Assignments > Module 8 Challenge > starter code (https://bootcampspot.instructure.com/courses/6369/assignments/90394?module_item_id=1341044). The starter code includes all the folders and files except for assets and README.md. Car.ts, Vehicle.ts, Wheel.ts, AbleToTow.ts, and Driveable.ts have not been modified from the starter code except for grammatical changes for consistency. All other contributions were made by myself with the assitance of GitHub Copilot. 
+Starter code was sourced from Rutgers University Coding Bootcamp section RUT-VIRT-FSF-PT-10-2024-U-LOLC-MWTH > Assignments > Module 8 Challenge > starter code (https://bootcampspot.instructure.com/courses/6369/assignments/90394?module_item_id=1341044). The starter code includes all the folders and files except for assets and README.md. Car.ts, Vehicle.ts, Wheel.ts, AbleToTow.ts, and Driveable.ts have not been modified from the starter code except for grammatical changes for consistency. The package.json, tsconfig.json, and .gitignore files were not modified at all from the starter code. All other contributions were made by myself with the assistance of GitHub Copilot. 
 
 GitHub: amelia1105 (https://github.com/amelia1105)
 
