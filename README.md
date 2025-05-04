@@ -4,14 +4,18 @@
 
 This application allows users to select and create vehicles and then perform certain actions on those vehicles, like accelerate, decelerate, or tow (if able). The user will start the application using npm start and exit the application using the 'Exit' option. This project was built as part of the Module 8 Challenge for the Rutgers University Coding Bootcamp. My motivation in completing this project was to not only improve my ability to code in TypeScript but also to improve the quality of my code by addressing my problem areas. For example, even though validation was not a requirement for this project, I implemented it because it was something I skipped over last time, and I want to write better code. While this project helped me learn more about Inquirer and TypeScript, it also gave me some real world experience by using starter code instead of starting from scratch.
 
-## Table of Contents (Optional)
+## Table of Contents
 
+- [Video](#video)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#questions)
-- [Video](#video)
+
+## Video
+
+[How to install and use this application](https://drive.google.com/file/d/1Qkz_SAvfPZBxoKmfxrzm1lQjeM0oQ0yZ/view?usp=sharing)
 
 ## Installation
 
@@ -67,7 +71,7 @@ GitHub: amelia1105 (https://github.com/amelia1105)
 
 MIT License
 
-Copyright (c) 2024 Amelia Bellanger
+Copyright (c) 2024 Amelia Alvarado
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -89,7 +93,4 @@ SOFTWARE.
 
 ## Questions
 
-For any questions about this project, please contact me by email: aebellanger@yahoo.com
-
-## Video
-[How to install and use this application](https://drive.google.com/file/d/1Qkz_SAvfPZBxoKmfxrzm1lQjeM0oQ0yZ/view?usp=sharing)
+For any questions about this project, please contact me by email: ameliabalvarado@gmail.com
